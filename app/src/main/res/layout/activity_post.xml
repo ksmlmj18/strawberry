@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="#E91E63"
+    tools:context=".post">
+
+    <Spinner
+        android:id="@+id/dd_post_category"
+        android:layout_width="183dp"
+        android:layout_height="44dp"
+        android:layout_marginEnd="132dp"
+        android:layout_marginBottom="556dp"
+        android:entries="@array/카테고리"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_post_title" />
+
+
+    <TextView
+        android:id="@+id/tv_post_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="33dp"
+        android:text="제목"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/et_post_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/et_post_title" />
+
+    <TextView
+        android:id="@+id/tv_post_category"
+        android:layout_width="69dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="556dp"
+        android:text="카테고리"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_post_title" />
+
+    <TextView
+        android:id="@+id/tv_post_startDay"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="500dp"
+        android:text="시작일"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_post_category"
+        app:layout_constraintVertical_bias="0.84" />
+
+    <TextView
+        android:id="@+id/tv_post_endDay"
+        android:layout_width="69dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="440dp"
+        android:text="종료일"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_post_startDay"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/et_post_title"
+        android:layout_width="255dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="76dp"
+        android:background="@drawable/stroke_"
+        android:hint="제목 입력"
+        app:layout_constraintStart_toEndOf="@+id/tv_post_title"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_post_detail"
+        android:layout_width="69dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="388dp"
+        android:text="상세내용"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_post_endDay"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/bt_post_attach"
+        android:layout_width="79dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="580dp"
+        android:layout_marginEnd="68dp"
+        android:backgroundTint="#E91E63"
+        android:text="첨부"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_post_attach"
+        android:layout_width="217dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="580dp"
+        android:background="@drawable/stroke_"
+        android:gravity="center"
+        android:hint="파일,이미지 첨부"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@+id/bt_post_attach"
+        app:layout_constraintHorizontal_bias="0.276"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/bt_post_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#E91E63"
+        android:text="저장"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bt_post_cancel"
+        app:layout_constraintTop_toBottomOf="@+id/bt_post_attach"
+        app:layout_constraintVertical_bias="0.424" />
+
+    <Button
+        android:id="@+id/bt_post_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginEnd="19dp"
+        android:backgroundTint="#BFBBBC"
+        android:text="취소"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/bt_post_save"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_post_attach"
+        app:layout_constraintVertical_bias="0.419" />
+
+    <Button
+        android:id="@+id/dp_post_startDay"
+        style="?android:spinnerStyle"
+        android:layout_width="265dp"
+        android:layout_height="56dp"
+        android:layout_marginEnd="72dp"
+        android:layout_marginBottom="484dp"
+        android:onClick="openDatePicker"
+        android:text="JAN 01 2022"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dd_post_category" />
+
+    <Button
+        android:id="@+id/bt_post_back"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#A3A1A1"
+        android:text="←"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/iv_register_berry"
+        app:layout_constraintHorizontal_bias="0.03"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/dp_post_endDay"
+        style="?android:spinnerStyle"
+        android:layout_width="265dp"
+        android:layout_height="56dp"
+        android:layout_marginEnd="72dp"
+        android:layout_marginBottom="412dp"
+        android:onClick="openDatePicker"
+        android:text="JAN 01 2022"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dp_post_startDay" />
+
+    <ImageView
+        android:id="@+id/iv_register_berry"
+        android:layout_width="180dp"
+        android:layout_height="61dp"
+        android:src="@drawable/berry2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.008" />
+
+    <LinearLayout
+        android:id="@+id/lo_auction_layout"
+        android:layout_width="408dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="720dp"
+        android:layout_marginEnd="1dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/bt_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#FFFFFF"
+            app:srcCompat="@drawable/home" />
+
+        <ImageButton
+            android:id="@+id/bt_auction_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#FFFFFF"
+            app:srcCompat="@drawable/category" />
+
+        <ImageButton
+            android:id="@+id/bt_auction_scrap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#FFFFFF"
+            app:srcCompat="@drawable/scrap" />
+
+        <ImageButton
+            android:id="@+id/bt_auction_chat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#FFFFFF"
+            app:srcCompat="@drawable/chat" />
+
+        <ImageButton
+            android:id="@+id/bt_auction_mypage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#FFFFFF"
+            app:srcCompat="@drawable/mypage" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView4"
+        android:layout_width="393dp"
+        android:layout_height="225dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_post_attach"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_post_detail"
+        app:layout_constraintVertical_bias="0.0">
+
+        <EditText
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="내용 입력" />
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
