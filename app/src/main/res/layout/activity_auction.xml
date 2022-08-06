@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".auctionActivity">
+
+    <TextView
+        android:id="@+id/tv_auction_it"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:layout_marginEnd="18dp"
+        android:text="IT"
+        android:textAlignment="viewStart"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/tv_auction_video"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bt_auction_it" />
+
+    <Button
+        android:id="@+id/bt_auction_back"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#A3A1A1"
+        android:text="←"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/iv_register_berry"
+        app:layout_constraintHorizontal_bias="0.03"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_register_berry"
+        android:layout_width="180dp"
+        android:layout_height="61dp"
+        android:src="@drawable/berry2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
+
+    <EditText
+        android:id="@+id/et_auction_search"
+        android:layout_width="356dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="90dp"
+        android:background="@drawable/stroke_"
+        android:hint="검색창"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/bt_auction_disign"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bt_auction_video"
+        app:layout_constraintTop_toBottomOf="@+id/et_auction_search"
+        app:srcCompat="@drawable/disign_icon" />
+
+    <TextView
+        android:id="@+id/tv_auction_disign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="disign"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_auction_video"
+        app:layout_constraintTop_toBottomOf="@+id/bt_auction_disign" />
+
+    <ImageButton
+        android:id="@+id/bt_auction_it"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#FFFFFF"
+        app:layout_constraintEnd_toStartOf="@+id/bt_auction_video"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_auction_search"
+        app:srcCompat="@drawable/it_icon" />
+
+    <ImageButton
+        android:id="@+id/bt_auction_video"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#FFFFFF"
+        app:layout_constraintEnd_toStartOf="@+id/bt_auction_disign"
+        app:layout_constraintStart_toEndOf="@+id/bt_auction_it"
+        app:layout_constraintTop_toBottomOf="@+id/et_auction_search"
+        app:srcCompat="@drawable/video_icon" />
+
+    <TextView
+        android:id="@+id/tv_auction_video"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="3dp"
+        android:text="video"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/tv_auction_disign"
+        app:layout_constraintStart_toEndOf="@+id/tv_auction_it"
+        app:layout_constraintTop_toBottomOf="@+id/bt_auction_video" />
+
+    <LinearLayout
+        android:id="@+id/lo_layout"
+        android:layout_width="408dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="730dp"
+        android:layout_marginEnd="1dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/bt_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#FFFFFF"
+            app:srcCompat="@drawable/home" />
+
+        <ImageButton
+            android:id="@+id/bt_auction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#FFFFFF"
+            app:srcCompat="@drawable/category" />
+
+        <ImageButton
+            android:id="@+id/bt_scrap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#FFFFFF"
+            app:srcCompat="@drawable/scrap" />
+
+        <ImageButton
+            android:id="@+id/bt_chat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#FFFFFF"
+            app:srcCompat="@drawable/chat" />
+
+        <ImageButton
+            android:id="@+id/bt_mypage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#FFFFFF"
+            app:srcCompat="@drawable/mypage" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_auction_video">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </RelativeLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tv_auction_newPost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:text="최신 게시물"
+        android:textColor="#E91E63"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView"
+        app:layout_constraintStart_toStartOf="@+id/scrollView" />
+
+    <ImageView
+        android:id="@+id/iv_auction_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="98dp"
+        app:layout_constraintEnd_toStartOf="@+id/iv_register_berry"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/et_auction_search"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_search" />
+    <![CDATA[
+
+            android:id="@+id/sv_auction_scroll"
+            android:layout_width="409dp"
+            android:layout_height="371dp"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="286dp">
+
+    ]]>
+</androidx.constraintlayout.widget.ConstraintLayout>
