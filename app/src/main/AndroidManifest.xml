@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.main_">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,9 +14,28 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Main_"
+        android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".postCheck"
+            android:name=".Refresh"
+            android:exported="false" />
+        <activity
+            android:name=".Search"
+            android:exported="false" />
+        <activity
+            android:name=".AuctionCategory3"
+            android:exported="false" />
+        <activity
+            android:name=".AuctionCategory2"
+            android:exported="false" />
+        <activity
+            android:name=".MainLogin"
+            android:exported="true" />
+        <activity
+            android:name=".Main"
+            android:exported="true" />
+        <activity
+            android:name=".PostCheck"
             android:exported="false" />
         <activity
             android:name=".Point"
@@ -38,19 +59,19 @@
             android:name=".AuctionCategory"
             android:exported="false" />
         <activity
-            android:name=".userinfoEdit"
+            android:name=".UserinfoEdit"
             android:exported="false" />
         <activity
-            android:name=".userInfo"
+            android:name=".UserInfo"
             android:exported="false" />
         <activity
-            android:name=".auctionActivity"
+            android:name=".Auction"
             android:exported="false" />
         <activity
-            android:name=".myPage"
+            android:name=".MyPage"
             android:exported="false" />
         <activity
-            android:name=".TitleActivity"
+            android:name=".Title"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -59,17 +80,14 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".RegisterActivity"
+            android:name=".Register"
             android:exported="false" />
         <activity
-            android:name=".post"
+            android:name=".Post"
             android:exported="true" />
         <activity
-            android:name=".login"
+            android:name=".Login"
             android:exported="false" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="true" />
     </application>
 
 </manifest>

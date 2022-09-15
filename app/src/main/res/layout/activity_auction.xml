@@ -1,225 +1,310 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"><![CDATA[
     tools:context=".auctionActivity">
 
-    <TextView
-        android:id="@+id/tv_auction_it"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="11dp"
-        android:layout_marginEnd="18dp"
-        android:text="IT"
-        android:textAlignment="viewStart"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/tv_auction_video"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bt_auction_it" />
+    ]]>
 
-    <Button
-        android:id="@+id/bt_auction_back"
-        android:layout_width="49dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="12dp"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_marginTop="8dp"
-        android:backgroundTint="#A3A1A1"
-        android:text="←"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/iv_register_berry"
-        app:layout_constraintHorizontal_bias="0.03"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="wrap_content">
 
-    <ImageView
-        android:id="@+id/iv_register_berry"
-        android:layout_width="180dp"
-        android:layout_height="61dp"
-        android:src="@drawable/berry2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bt_refresh"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/refresh_press"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
-    <EditText
-        android:id="@+id/et_auction_search"
-        android:layout_width="356dp"
-        android:layout_height="47dp"
-        android:layout_marginTop="90dp"
-        android:background="@drawable/stroke_"
-        android:hint="검색창"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@+id/iv_title"
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:src="@drawable/pont" />
 
-    <ImageButton
-        android:id="@+id/bt_auction_disign"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/bt_auction_video"
-        app:layout_constraintTop_toBottomOf="@+id/et_auction_search"
-        app:srcCompat="@drawable/disign_icon" />
-
-    <TextView
-        android:id="@+id/tv_auction_disign"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="disign"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tv_auction_video"
-        app:layout_constraintTop_toBottomOf="@+id/bt_auction_disign" />
-
-    <ImageButton
-        android:id="@+id/bt_auction_it"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="#FFFFFF"
-        app:layout_constraintEnd_toStartOf="@+id/bt_auction_video"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_auction_search"
-        app:srcCompat="@drawable/it_icon" />
-
-    <ImageButton
-        android:id="@+id/bt_auction_video"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="#FFFFFF"
-        app:layout_constraintEnd_toStartOf="@+id/bt_auction_disign"
-        app:layout_constraintStart_toEndOf="@+id/bt_auction_it"
-        app:layout_constraintTop_toBottomOf="@+id/et_auction_search"
-        app:srcCompat="@drawable/video_icon" />
-
-    <TextView
-        android:id="@+id/tv_auction_video"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="3dp"
-        android:text="video"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/tv_auction_disign"
-        app:layout_constraintStart_toEndOf="@+id/tv_auction_it"
-        app:layout_constraintTop_toBottomOf="@+id/bt_auction_video" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bt_auction_back"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="13dp"
+            android:background="@drawable/back_press"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
 
     <LinearLayout
-        android:id="@+id/lo_layout"
-        android:layout_width="408dp"
-        android:layout_height="72dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="730dp"
-        android:layout_marginEnd="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginStart="40dp">
+
+        <EditText
+            android:id="@+id/et_auction_search"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:background="@drawable/line"
+            android:hint="두 글자 이상 입력하세요."
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:maxLines="1"
+            android:textAlignment="center"
+            android:textSize="12dp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/dd_auction_sequence"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="0dp"
+            android:backgroundTint="@color/black"
+            android:entries="@array/순서" />
+
+        <TextView
+            android:id="@+id/tv_auction_category_category"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginEnd="51dp"
+            android:text="전체 카테고리"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/line_top"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bt_auction_video"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/video_press"
+            app:srcCompat="@drawable/disign_icon" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bt_auction_disign"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/disign_press"
+            app:srcCompat="@drawable/it_icon" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bt_auction_it"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/it_press"
+            app:srcCompat="@drawable/video_icon" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="31dp"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:background="@drawable/line_bottom">
 
-        <ImageButton
-            android:id="@+id/bt_home"
-            android:layout_width="wrap_content"
+        <TextView
+            android:id="@+id/tv_auction_video"
+            android:layout_width="88dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/home" />
+            android:text="영상"
+            android:textColor="@color/black"
+            android:textSize="11dp"
+            android:textAlignment="center"
+            android:textStyle="bold" />
 
-        <ImageButton
-            android:id="@+id/bt_auction"
-            android:layout_width="wrap_content"
+        <TextView
+            android:id="@+id/tv_auction_disign"
+            android:layout_width="88dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/category" />
+            android:text="디자인"
+            android:textColor="@color/black"
+            android:textSize="11dp"
+            android:textAlignment="center"
+            android:textStyle="bold" />
 
-        <ImageButton
-            android:id="@+id/bt_scrap"
-            android:layout_width="wrap_content"
+        <TextView
+            android:id="@+id/tv_auction_it"
+            android:layout_width="88dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/scrap" />
+            android:text="IT"
+            android:textColor="@color/black"
+            android:textSize="11dp"
+            android:textAlignment="center"
+            android:textStyle="bold" />
 
-        <ImageButton
-            android:id="@+id/bt_chat"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/chat" />
-
-        <ImageButton
-            android:id="@+id/bt_mypage"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/mypage" />
     </LinearLayout>
 
     <ScrollView
-        android:id="@+id/scrollView"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="1dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_auction_video">
+        android:layout_weight="1"
+        android:layout_marginTop="8dp"
+        android:fillViewport="true"
+        android:layout_marginBottom="8dp">
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-            <androidx.recyclerview.widget.RecyclerView
+            <ListView
+                android:id="@+id/listView1"
+                android:dividerHeight="2dp"
+                android:divider="#AAA6A6"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-        </RelativeLayout>
+                android:layout_height="wrap_content">
+
+
+            </ListView>
+        </LinearLayout>
     </ScrollView>
 
-    <TextView
-        android:id="@+id/tv_auction_newPost"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
-        android:text="최신 게시물"
-        android:textColor="#E91E63"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/scrollView"
-        app:layout_constraintStart_toStartOf="@+id/scrollView" />
+        android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/iv_auction_search"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="98dp"
-        app:layout_constraintEnd_toStartOf="@+id/iv_register_berry"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/et_auction_search"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_search" />
-    <![CDATA[
+        <LinearLayout
+            android:id="@+id/lo_auction_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/line_top"
+            android:orientation="horizontal">
 
-            android:id="@+id/sv_auction_scroll"
-            android:layout_width="409dp"
-            android:layout_height="371dp"
-            tools:layout_editor_absoluteX="1dp"
-            tools:layout_editor_absoluteY="286dp">
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/bt_auction"
+                android:layout_width="69dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/category_press" />
 
-    ]]>
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/bt_chat"
+                android:layout_width="69dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/chat2_press" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/bt_home"
+                android:layout_width="69dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/home_press" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/bt_scrap"
+                android:layout_width="69dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/scrap_press" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/bt_myPage"
+                android:layout_width="69dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/mypage_icon_press" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="경매"
+                android:textSize="12dp"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="채팅"
+                android:textAlignment="center"
+                android:textSize="12dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="홈"
+                android:textAlignment="center"
+                android:textSize="12dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="스크랩"
+                android:textAlignment="center"
+                android:textSize="12dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="내정보"
+                android:textSize="12dp"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
